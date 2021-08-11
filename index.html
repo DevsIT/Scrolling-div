@@ -13,6 +13,30 @@
 
 
 
+<script>
+jQuery(document).ready(function() {
+
+  // Sticky Menu
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 10){  
+      //$('.header-sticky').addClass("sticky");
+
+      var newHeight = $("header").height()+30;
+      $('.product-info').css("top", newHeight);
+    }
+    else{
+
+      //$('.header-sticky').removeClass("sticky");   
+
+      var newHeight = 0;
+      $('.product-info').css("top", newHeight);
+    }
+  });
+
+
+});
+</script>
+
 
 <style>
 .product-single__meta {
